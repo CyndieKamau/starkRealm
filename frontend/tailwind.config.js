@@ -37,11 +37,13 @@ export default {
           12: "#2E2A41",
           13: "#6C7275",
         },
+        
       },
       fontFamily: {
         sans: ["var(--font-sora)", ...fontFamily.sans],
         code: "var(--font-code)",
         grotesk: "var(--font-grotesk)",
+        nosifer: ["Nosifer", "cursive"],
       },
       letterSpacing: {
         tagline: ".15em",
@@ -74,6 +76,7 @@ export default {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
         "conic-gradient":
           "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+        "gradient-text": "linear-gradient(251deg, rgba(186,97,246,1) 0%, rgba(241,82,82,1) 50%, rgba(246,182,91,1) 100%)",
       },
       boxShadow: {
         glow: "0 0 20px rgba(255, 255, 255, 0.6)",

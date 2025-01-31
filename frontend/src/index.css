@@ -13,7 +13,7 @@
   --font-grotesk: "Space Grotesk", sans-serif;
   --font-nosifer: "Nosifer", cursive;
   --color-scheme: dark;
-}
+  --gradient-text: linear-gradient(90deg, #ff4500 10%, #ffae00 90%);}
 
 * {
   scroll-behavior: smooth;
