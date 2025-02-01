@@ -5,10 +5,12 @@ import Section from "./Section";
 import battlefield1 from "../assets/site/hero/battlefield1.png";
 import TypeWrite from "./design/TypeWrite";
 
-
 const Hero = () => {
   return (
-    <Section className="relative h-[90vh] flex items-center justify-center text-center" id="hero">
+    <Section
+      className="relative h-[90vh] flex items-center justify-center text-center"
+      id="hero"
+    >
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${battlefield1})` }}
@@ -26,7 +28,13 @@ const Hero = () => {
           Master the arcane, uncover forbidden spells, and forge your legacy in Stark Realm! The mystical battle for supremacy begins.
         </p> */}
 
-        <TypeWrite />
+        <TypeWrite
+          sentences={[
+            "Master the arcane, uncover forbidden spells.",
+            "Forge your legacy in Stark Realm!",
+            "The mystical battle for supremacy begins.",
+          ]}
+        />
 
         <Button href="/pre-register">Pre-Register Now</Button>
       </div>

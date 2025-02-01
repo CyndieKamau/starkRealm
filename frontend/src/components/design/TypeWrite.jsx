@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 
-const sentences = [
-  "Master the arcane, uncover forbidden spells.",
-  "Forge your legacy in Stark Realm!",
-  "The mystical battle for supremacy begins.",
-];
-
-const TypeWrite = () => {
+const TypeWrite = ({ sentences }) => {
   const [displayedSentences, setDisplayedSentences] = useState([]);
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
@@ -16,7 +10,6 @@ const TypeWrite = () => {
     if (sentenceIndex < sentences.length) {
       if (index < sentences[sentenceIndex].length) {
         setTimeout(() => {
-          // Create a copy before setting state to avoid re-renders affecting updates
           const newText = sentences[sentenceIndex].slice(0, index + 1);
           setText(newText);
           setIndex(index + 1);
@@ -30,7 +23,7 @@ const TypeWrite = () => {
         }, 800);
       }
     }
-  }, [index, sentenceIndex]);
+  }, [index, sentenceIndex, sentences, text]);
 
   return (
     <div className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
